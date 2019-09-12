@@ -5,9 +5,7 @@ coreschema==0.0.4
 Django==2.2.5
 django-bootstrap4==0.0.8
 django-filter==2.2.0
-django-stubs==1.1.0
 djangorestframework==3.10.2
-djangorestframework-stubs==1.0.0
 httpie==1.0.3
 idna==2.8
 itypes==1.1.0
