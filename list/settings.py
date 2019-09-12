@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', 
+    #'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -183,21 +183,3 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
-
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
- 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
- 
-ALLOWED_HOSTS = ['*']
- 
-STATIC_ROOT = 'staticfiles'
- 
-DEBUG = False
- 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
-# Activate Django-Heroku.
-django_heroku.settings(locals())
